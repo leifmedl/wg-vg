@@ -15,7 +15,7 @@ then
 	sleep 2
 	wg-quick up $WG_IFACE
 	echo "external ip is now"
-	curl https://am.i.mullvad.net/connected
+	curl ifconfig.io
 	exit 1
 else
 	echo "bringing down vpn service"
@@ -23,6 +23,6 @@ else
 	sleep 2
 	wg-quick down $EXT_WGIFACE
         echo "external ip is now"
-	curl https://am.i.mullvad.net/connected
+	curl ifconfig.io
 	exit 1
 fi
